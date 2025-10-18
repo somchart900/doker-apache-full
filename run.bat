@@ -15,7 +15,7 @@ exit
 
 :dev
 docker compose -f dev.yml up -d
-::mutagen.exe project start
+mutagen.exe project start
 echo .
 echo .
 echo .
@@ -25,7 +25,7 @@ echo .
 echo .
 pause
 docker compose -f dev.yml down
-mutagen.exe sync project terminate 
+mutagen.exe project terminate 
 mutagen daemon stop
 taskkill /F /IM mutagen.exe
 exit
@@ -42,7 +42,7 @@ echo .
 echo .
 pause
 compose -f production.yml down
-mutagen.exe sync project terminate 
+mutagen.exe project terminate 
 mutagen daemon stop
 taskkill /F /IM mutagen.exe
 exit
